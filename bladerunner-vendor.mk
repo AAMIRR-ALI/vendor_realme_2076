@@ -981,6 +981,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.4 \
     vendor.qti.memory.pasrmanager@1.0 \
     vendor.qti.memory.pasrmanager@1.1 \
+    sound_trigger.primary.kona \
     libFileMux_proprietary \
     libacdb-fts \
     libacdbloader \
