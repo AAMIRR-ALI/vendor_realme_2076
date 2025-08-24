@@ -4,7 +4,7 @@
 
 soong_namespace {
     imports: [
-        "device/realme/bladerunner",
+        "device/realme/bitra",
         "hardware/oplus",
         "hardware/qcom-caf/sm8250",
         "hardware/qcom-caf/wlan",
@@ -3990,37 +3990,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "sound_trigger.primary.kona",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/hw/sound_trigger.primary.kona.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libtinyalsa",
-                "libaudioroute",
-                "libexpat",
-                "libhardware_legacy",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libFileMux_proprietary",
     owner: "realme",
     strip: {
@@ -4807,8 +4776,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqtigef_vendor",
-    stem: "libqtigef",
+    name: "libqtigef",
     owner: "realme",
     strip: {
         none: true,
@@ -12508,33 +12476,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtriplecam_optical_zoom_vs",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libtriplecam_optical_zoom_vs.so",
-            ],
-            shared_libs: [
-                "libmpbase",
-                "libsensorndkbridge",
-                "libOpenCL",
-                "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libtrustedapploader",
     owner: "realme",
     strip: {
@@ -13198,34 +13139,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.cameraextension@1.0",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.oplus.hardware.cameraextension@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -17582,6 +17495,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libstdc++",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libstdc++.so",
+            ],
+            shared_libs: [
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "anc.hal",
     owner: "realme",
     strip: {
@@ -17640,42 +17574,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qti.sensor.gc8054",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/camera/com.qti.sensor.gc8054.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libcutils",
-                "liblog",
-                "libofflinelog",
-                "libsync",
-                "libbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "vendor.oplus.hardware.orms@1.0",
-                "libormshalclient",
-                "vendor.oplus.hardware.cammidasservice@1.0",
-                "libmidasserviceintf",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "camera",
     prefer: true,
     device_specific: true,
 }
@@ -17753,78 +17651,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qti.sensor.imx616",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/camera/com.qti.sensor.imx616.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libcutils",
-                "liblog",
-                "libofflinelog",
-                "libsync",
-                "libbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "vendor.oplus.hardware.orms@1.0",
-                "libormshalclient",
-                "vendor.oplus.hardware.cammidasservice@1.0",
-                "libmidasserviceintf",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "camera",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qti.sensor.ov02a1b",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/camera/com.qti.sensor.ov02a1b.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libcutils",
-                "liblog",
-                "libofflinelog",
-                "libsync",
-                "libbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "vendor.oplus.hardware.orms@1.0",
-                "libormshalclient",
-                "vendor.oplus.hardware.cammidasservice@1.0",
-                "libmidasserviceintf",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "camera",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "com.qti.sensor.ov02b",
     owner: "realme",
     strip: {
@@ -17884,42 +17710,6 @@ cc_prebuilt_library_shared {
                 "libosenseaidlhalclient",
                 "vendor.oplus.hardware.cammidasservice-V1-ndk_platform",
                 "libmidasserviceintf_aidl",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "camera",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qti.sensor.s5k3m5sx",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/camera/com.qti.sensor.s5k3m5sx.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libcutils",
-                "liblog",
-                "libofflinelog",
-                "libsync",
-                "libbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "vendor.oplus.hardware.orms@1.0",
-                "libormshalclient",
-                "vendor.oplus.hardware.cammidasservice@1.0",
-                "libmidasserviceintf",
                 "libc",
                 "libm",
                 "libdl",
@@ -20502,72 +20292,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libarc_sateis",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libarc_sateis.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libtriplecam_image_optical_zoom",
-                "libtriplecam_optical_zoom_control",
-                "libtriplecam_optical_zoom_vs",
-                "libtriplecam_video_optical_zoom",
-                "lib_rectify",
-                "libarc_sateis_custom",
-                "libutils",
-                "libcutils",
-                "libcom.qti.chinodeutils",
-                "libm",
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libarc_sateis_custom",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libarc_sateis_custom.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libcamera_metadata",
-                "libchilog",
-                "libcom.qti.chinodeutils",
-                "liblog",
-                "libutils",
-                "libui",
-                "libhwconfigurationutil",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libarcsoft_aicolor_image",
     owner: "realme",
     strip: {
@@ -21652,94 +21376,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdapparamstorage_v3_6",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libdapparamstorage_v3_6.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdeccfg_v3_6",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libdeccfg_v3_6.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "vendor.dolby_v3_6.hardware.dms360@2.0",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdlbdsservice_v3_6",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libdlbdsservice_v3_6.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libstagefright_foundation-v33",
-                "liblog",
-                "libxml2",
-                "libdapparamstorage_v3_6",
-                "libsqlite",
-                "libhidlbase",
-                "vendor.dolby_v3_6.hardware.dms360@2.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libdmtp-protos-lite",
     owner: "realme",
     strip: {
@@ -22556,32 +22192,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqtigef",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libqtigef.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libshdr_stub",
     owner: "realme",
     strip: {
@@ -22910,87 +22520,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtriplecam_image_optical_zoom",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libtriplecam_image_optical_zoom.so",
-            ],
-            shared_libs: [
-                "libmpbase",
-                "libOpenCL",
-                "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libtriplecam_optical_zoom_control",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libtriplecam_optical_zoom_control.so",
-            ],
-            shared_libs: [
-                "libmpbase",
-                "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libtriplecam_video_optical_zoom",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libtriplecam_video_optical_zoom.so",
-            ],
-            shared_libs: [
-                "libmpbase",
-                "libsensorndkbridge",
-                "libEGL",
-                "libGLESv3",
-                "libion",
-                "libOpenCL",
-                "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libvl53l1_daemon",
     owner: "realme",
     strip: {
@@ -23135,128 +22664,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhwdap_v3_6",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/soundfx/libhwdap_v3_6.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libaudioutils",
-                "libdapparamstorage_v3_6",
-                "libhidlbase",
-                "vendor.dolby_v3_6.hardware.dms360@2.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "soundfx",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libswdap_v3_6",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/soundfx/libswdap_v3_6.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libaudioutils",
-                "libdapparamstorage_v3_6",
-                "libhidlbase",
-                "vendor.dolby_v3_6.hardware.dms360@2.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "soundfx",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.dolby_v3_6.hardware.dms360@2.0-impl",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.dolby_v3_6.hardware.dms360@2.0-impl.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libdapparamstorage_v3_6",
-                "libdlbdsservice_v3_6",
-                "vendor.dolby_v3_6.hardware.dms360@2.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.dolby_v3_6.hardware.dms360@2.0",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.dolby_v3_6.hardware.dms360@2.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.oplus.hardware.appradio@1.0",
     owner: "realme",
     strip: {
@@ -23346,49 +22753,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "libhwconfigurationutil",
                 "vendor.oplus.hardware.cameraextension-V1-ndk_platform",
-                "libz",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.cameraextension@1.0-service-impl",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.cameraextension@1.0-service-impl.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libcutils",
-                "liblog",
-                "libofflinelog",
-                "libsync",
-                "libbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "vendor.oplus.hardware.osense.client@1.0",
-                "libosensehalclient",
-                "vendor.oplus.hardware.cammidasservice@1.0",
-                "libmidasserviceintf",
-                "libchilog",
-                "libutils",
-                "libhardware",
-                "libhwconfigurationutil",
-                "vendor.oplus.hardware.orms@1.0",
-                "libormshalclient",
-                "vendor.oplus.hardware.cameraextension@1.0",
                 "libz",
                 "libc",
                 "libm",
@@ -23826,6 +23190,33 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
+    name: "libarcsoft_hdrplus_hvx_skel_21619",
+    filename: "libarcsoft_hdrplus_hvx_skel_21619.so",
+    owner: "realme",
+    src: "proprietary/odm/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel_21619.so",
+    relative_install_path: "adsp",
+    device_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libarcsoft_hdrplus_se_hvx_skel_21619",
+    filename: "libarcsoft_hdrplus_se_hvx_skel_21619.so",
+    owner: "realme",
+    src: "proprietary/odm/lib/rfsa/adsp/libarcsoft_hdrplus_se_hvx_skel_21619.so",
+    relative_install_path: "adsp",
+    device_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libarcsoft_portraitsn_hvx_skel_21619",
+    filename: "libarcsoft_portraitsn_hvx_skel_21619.so",
+    owner: "realme",
+    src: "proprietary/odm/lib/rfsa/adsp/libarcsoft_portraitsn_hvx_skel_21619.so",
+    relative_install_path: "adsp",
+    device_specific: true,
+}
+
+prebuilt_rfsa {
     name: "libc++.so",
     filename: "libc++.so.1",
     owner: "realme",
@@ -24184,15 +23575,6 @@ prebuilt_etc_xml {
     name: "manifest_android.hardware.drm@1.3-service.widevine.xml",
     owner: "realme",
     src: "proprietary/odm/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    device_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "manifest_dax_dolby_v3_6.xml",
-    owner: "realme",
-    src: "proprietary/odm/etc/vintf/manifest/manifest_dax_dolby_v3_6.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     device_specific: true,
@@ -26449,38 +25831,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.dolby_v3_6.hardware.dms360@2.0-service",
-    owner: "realme",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/bin/hw/vendor.dolby_v3_6.hardware.dms360@2.0-service",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libhidlbase",
-                "libdapparamstorage_v3_6",
-                "libdlbdsservice_v3_6",
-                "vendor.dolby_v3_6.hardware.dms360@2.0",
-                "vendor.dolby_v3_6.hardware.dms360@2.0-impl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    device_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.oplus.hardware.biometrics.fingerprint@2.1-service",
     owner: "realme",
     target: {
@@ -26692,76 +26042,6 @@ cc_prebuilt_binary {
     },
     prefer: true,
     device_specific: true,
-}
-
-install_symlink {
-    name: "odm_lib_libdapparamstorage_v3_6_so",
-    device_specific: true,
-    installed_location: "lib/libdapparamstorage_v3_6.so",
-    symlink_target: "/odm/etc/libdapparamstorage_v3_6_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_libdeccfg_v3_6_so",
-    device_specific: true,
-    installed_location: "lib/libdeccfg_v3_6.so",
-    symlink_target: "/odm/etc/libdeccfg_v3_6_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_libdlbdsservice_v3_6_so",
-    device_specific: true,
-    installed_location: "lib/libdlbdsservice_v3_6.so",
-    symlink_target: "/odm/etc/libdlbdsservice_v3_6_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_libqtigef_so",
-    device_specific: true,
-    installed_location: "lib/libqtigef.so",
-    symlink_target: "/odm/etc/libqtigef_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_libstagefright_soft_ddpdec_so",
-    device_specific: true,
-    installed_location: "lib/libstagefright_soft_ddpdec.so",
-    symlink_target: "/odm/etc/libstagefright_soft_ddpdec_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_libstagefrightdolby_so",
-    device_specific: true,
-    installed_location: "lib/libstagefrightdolby.so",
-    symlink_target: "/odm/etc/libstagefrightdolby_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_soundfx_libhwdap_v3_6_so",
-    device_specific: true,
-    installed_location: "lib/soundfx/libhwdap_v3_6.so",
-    symlink_target: "/odm/etc/soundfx/libhwdap_v3_6_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_soundfx_libswdap_v3_6_so",
-    device_specific: true,
-    installed_location: "lib/soundfx/libswdap_v3_6.so",
-    symlink_target: "/odm/etc/soundfx/libswdap_v3_6_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_vendor_dolby_v3_6_hardware_dms360@2_0-impl_so",
-    device_specific: true,
-    installed_location: "lib/vendor.dolby_v3_6.hardware.dms360@2.0-impl.so",
-    symlink_target: "/odm/etc/vendor.dolby_v3_6.hardware.dms360@2.0-impl_etc.so",
-}
-
-install_symlink {
-    name: "odm_lib_vendor_dolby_v3_6_hardware_dms360@2_0_so",
-    device_specific: true,
-    installed_location: "lib/vendor.dolby_v3_6.hardware.dms360@2.0.so",
-    symlink_target: "/odm/etc/vendor.dolby_v3_6.hardware.dms360@2.0_etc.so",
 }
 
 install_symlink {

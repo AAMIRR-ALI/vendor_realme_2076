@@ -923,8 +923,10 @@ PRODUCT_PACKAGES += \
     libdiag \
     libdsi_netctrl \
     libdsutils \
+    libelements \
     libfastcvdsp_stub \
     libfastcvopt \
+    libgoogle3 \
     libgpudataproducer \
     libgsl \
     libidl \
