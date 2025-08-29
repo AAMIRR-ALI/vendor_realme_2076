@@ -1635,6 +1635,7 @@ PRODUCT_PACKAGES += \
     libstfd_mobile_api \
     libsymphony-cpu \
     libsymphonypower \
+    libtriplecam_image_optical_zoom \
     libvl53l1_daemon \
     libwatermark_photo \
     libwvhidl \
