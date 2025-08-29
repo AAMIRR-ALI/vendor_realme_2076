@@ -1551,6 +1551,7 @@ PRODUCT_PACKAGES += \
     libapsjpeg \
     libapspng \
     libarc.ion \
+    libarc_sateis \
     libarcsoft_aicolor_image \
     libarcsoft_aicolor_video \
     libarcsoft_distortion_correction \
