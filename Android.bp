@@ -20353,6 +20353,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libarc_sateis_custom",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libarc_sateis_custom.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libcamera_metadata",
+                "libchilog",
+                "libcom.qti.chinodeutils",
+                "liblog",
+                "libutils",
+                "libui",
+                "libhwconfigurationutil",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libarcsoft_aicolor_image",
     owner: "realme",
     strip: {
@@ -22607,6 +22639,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtriplecam_video_optical_zoom",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libtriplecam_video_optical_zoom.so",
+            ],
+            shared_libs: [
+                "libmpbase",
+                "libsensorndkbridge",
+                "libEGL",
+                "libGLESv3",
+                "libion",
+                "libOpenCL",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libvl53l1_daemon",
     owner: "realme",
     strip: {
@@ -22840,6 +22902,49 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "libhwconfigurationutil",
                 "vendor.oplus.hardware.cameraextension-V1-ndk_platform",
+                "libz",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.oplus.hardware.cameraextension@1.0-service-impl",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/vendor.oplus.hardware.cameraextension@1.0-service-impl.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libofflinelog",
+                "libsync",
+                "libbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "vendor.oplus.hardware.osense.client@1.0",
+                "libosensehalclient",
+                "vendor.oplus.hardware.cammidasservice@1.0",
+                "libmidasserviceintf",
+                "libchilog",
+                "libutils",
+                "libhardware",
+                "libhwconfigurationutil",
+                "vendor.oplus.hardware.orms@1.0",
+                "libormshalclient",
+                "vendor.oplus.hardware.cameraextension@1.0",
                 "libz",
                 "libc",
                 "libm",

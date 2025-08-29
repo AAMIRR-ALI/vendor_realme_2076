@@ -1553,6 +1553,7 @@ PRODUCT_PACKAGES += \
     libapspng \
     libarc.ion \
     libarc_sateis \
+    libarc_sateis_custom \
     libarcsoft_aicolor_image \
     libarcsoft_aicolor_video \
     libarcsoft_distortion_correction \
@@ -1637,6 +1638,7 @@ PRODUCT_PACKAGES += \
     libsymphony-cpu \
     libsymphonypower \
     libtriplecam_image_optical_zoom \
+    libtriplecam_video_optical_zoom \
     libvl53l1_daemon \
     libwatermark_photo \
     libwvhidl \
@@ -1645,6 +1647,7 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.appradio@1.0 \
     vendor.oplus.hardware.biometrics.fingerprint@2.1_odm \
     vendor.oplus.hardware.cameraextension-V1-service-impl \
+    vendor.oplus.hardware.cameraextension@1.0-service-impl \
     vendor.oplus.hardware.cammidasservice-V1-ndk_platform_odm \
     vendor.oplus.hardware.commondcs@1.0 \
     vendor.oplus.hardware.communicationcenter_compat@1.0 \
