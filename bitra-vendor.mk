@@ -1453,7 +1453,6 @@ PRODUCT_PACKAGES += \
     libosie_process \
     libosie_stub \
     vendor.oplus.hardware.orms@1.0 \
-    libstdc++ \
     anc.hal \
     android.hardware.secure_element@1.0-impl \
     com.qti.sensor.hi846 \
