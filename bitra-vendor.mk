@@ -1278,6 +1278,7 @@ PRODUCT_PACKAGES += \
     libthreadutils \
     libtime_genoff \
     libtinyxml2_1 \
+    libtriplecam_optical_zoom_vs \
     libtrustedapploader \
     libwms \
     libwqe \
