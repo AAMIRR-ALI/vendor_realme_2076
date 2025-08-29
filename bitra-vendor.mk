@@ -1301,6 +1301,7 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
     vendor.oplus.hardware.cameraextension-V1-ndk_platform \
+    vendor.oplus.hardware.cameraextension@1.0 \
     vendor.oplus.hardware.cammidasservice-V1-ndk_platform \
     vendor.oplus.hardware.cammidasservice@1.0 \
     vendor.oplus.hardware.commondcs-V1-ndk_platform \
