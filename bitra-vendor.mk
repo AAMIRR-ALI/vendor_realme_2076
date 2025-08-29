@@ -1639,6 +1639,7 @@ PRODUCT_PACKAGES += \
     libsymphony-cpu \
     libsymphonypower \
     libtriplecam_image_optical_zoom \
+    libtriplecam_optical_zoom_control \
     libtriplecam_video_optical_zoom \
     libvl53l1_daemon \
     libwatermark_photo \
