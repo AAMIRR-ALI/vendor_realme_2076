@@ -23974,18 +23974,6 @@ android_app_import {
 }
 
 android_app_import {
-    name: "HotwordEnrollmentOKGoogleHEXAGON",
-    owner: "realme",
-    apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    product_specific: true,
-}
-
-android_app_import {
     name: "ImsRcsService",
     owner: "realme",
     apk: "proprietary/system_ext/app/ImsRcsService/ImsRcsService.apk",
@@ -24061,15 +24049,6 @@ dex_import {
     jars: [
         "proprietary/system/framework/WfdCommon.jar",
     ],
-}
-
-dex_import {
-    name: "com.android.hotwordenrollment.common.util",
-    owner: "realme",
-    jars: [
-        "proprietary/product/framework/com.android.hotwordenrollment.common.util.jar",
-    ],
-    product_specific: true,
 }
 
 dex_import {
